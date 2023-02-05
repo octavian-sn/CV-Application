@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import Sidebar from './components/Sidebar';
 import Main from './components/Main';
 import Form from './components/Form';
+import picture from './assets/profile.jpg';
 import './styles/app.css';
 
 class App extends Component {
   state = {
+    picture: picture,
     contact: {
       address: '430 Blackwell Street, Anchorage, AK, 99518',
       phone: '907-980-4070',
@@ -25,6 +27,12 @@ class App extends Component {
   };
 
   update = {
+    picture: (e) => {
+      this.setState({
+        picture: URL.createObjectURL(e.target.files[0]),
+      });
+      console.log(this.state.picture);
+    },
     skills: (e) => {
       const newArr = e.target.value.split(', ');
       this.setState({
@@ -40,7 +48,7 @@ class App extends Component {
   };
 
   render() {
-    const { contact, skills } = this.state;
+    const { contact, skills, picture } = this.state;
 
     return (
       <div className="app">
@@ -48,7 +56,12 @@ class App extends Component {
 
         <div className="pdf">
           <div className="resume">
-            <Sidebar contact={contact} skills={skills} />
+            <Sidebar
+              contact={contact}
+              skills={skills}
+              picture={picture}
+              update={this.update.picture}
+            />
             <Main />
           </div>
           <div className="background-overlay"></div>

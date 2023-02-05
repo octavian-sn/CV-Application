@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import profile from '../assets/profile.jpg';
 import uniqid from 'uniqid';
 import '../styles/sidebar.css';
 
@@ -7,6 +6,15 @@ class Sidebar extends Component {
   constructor(props) {
     super(props);
   }
+  state = {
+    changePicture: false,
+  };
+
+  hover = () => {
+    this.setState({
+      changePicture: !this.state.changePicture,
+    });
+  };
 
   renderContact = () => {
     const details = this.props.contact;
@@ -36,7 +44,16 @@ class Sidebar extends Component {
   render() {
     return (
       <div className="sidebar">
-        <img src={profile} alt="profile" />
+        <div className="picture">
+          <img src={this.props.picture} alt="profile" />
+          <input
+            type="file"
+            className={`img-overlay ${this.state.changePicture && 'opaque'}`}
+            onChange={(e) => this.props.update(e)}
+            onMouseEnter={this.hover}
+            onMouseLeave={this.hover}
+          ></input>
+        </div>
         {this.renderContact()}
         {this.renderSkills()}
       </div>
