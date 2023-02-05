@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+  --light-color: #f7f4f1;
+  --medium-color: #eee8e4;
+  --dark-color: #e6ddd6;
+  --darker-color: #ddd2c9;
+  --font-color: #72675f;
+  --dark-font-color: #615a54;
+}
+
+.sidebar {
+  background-color: #ddd2c970;
+  height: 100%;
+  width: 220px;
+  color: var(--dark-font-color);
+  padding: 35px;
+  border-right: solid 1px var(--darker-color);
+}
+/* Profile picture */
+.sidebar img {
+  height: 255px;
+  width: 260px;
+  border-radius: 50%;
+  border: solid 1px var(--darker-color);
+}
+/* Contact details */
+.contact {
+  display: flex;
+  flex-direction: column;
+  text-align: end;
+  margin: 25px 0 35px 0;
+}
+.contact--field {
+  border-bottom: 1px var(--font-color) solid;
+}
+.contact--field:last-child {
+  border-bottom: none;
+}
+.contact--field h4 {
+  font-family: 'Karla';
+  margin-bottom: -7px;
+  margin-top: 8px;
+}
+.contact--field p {
+  font-family: 'Inter';
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+/* Skills */
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.skills h3 {
+  padding: 6px 0 6px 0;
+  border-bottom: 1px var(--font-color) solid;
+  border-top: 1px var(--font-color) solid;
+}
+.skills p {
+  overflow: hidden;
+  font-family: 'Inter';
+  margin-bottom: -6px;
+  font-size: 13px;
+}

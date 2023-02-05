@@ -1,0 +1,8 @@
+* {
+  box-sizing: border-box;
+  --light-color: #f7f4f1;
+  --medium-color: #eee8e4;
+  --dark-color: #e6ddd6;
+  --darker-color: #ddd2c9;
+  --font-color: #615a54;
+}
