@@ -4,7 +4,11 @@
   --medium-color: #eee8e4;
   --dark-color: #e6ddd6;
   --darker-color: #ddd2c9;
-  --font-color: #615a54;
+  --dark-font-color: #615a54;
+  --title-dark: #9c8066;
+  --font-light: #70635a;
+  --font-dark: #413c39;
+  --title-light: #b8a391;
 }
 
 body {
@@ -14,43 +18,49 @@ body {
 
 /* App and background-overlay */
 .app {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  background-image: url(../assets/background.jpg);
+  background-size: cover;
+  min-height: 100vh;
+}
+.background-overlay {
+  min-height: 100%;
+  min-width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #e6ddd669;
+  z-index: 1;
 }
 
 /* FORM */
 form {
   min-height: 100vh;
   width: 500px;
-  background-color: var(--dark-color);
+  position: relative;
+  z-index: 10;
 }
 
-/* PDF */
-.pdf {
-  position: relative;
-  min-height: 100vh;
-  width: 800px;
-  background-image: url(../assets/background.jpg);
-  background-size: cover;
-  padding: 30px 20px 0 20px;
-}
-.background-overlay {
-  min-height: 100%;
-  width: 800px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background-color: #e6ddd691;
-  z-index: 1;
-}
 .resume {
+  margin: 30px 30px 0 30px;
   background-color: #f7f4f1ee;
-  height: 100%;
-  z-index: 100;
-  position: relative;
+  z-index: 10;
   display: flex;
   flex-direction: row;
   border-radius: 10px 10px 0 0;
   border: solid 1px var(--darker-color);
+}
+
+/* Font and color for section title and section info */
+.title {
+  font-family: 'Karla';
+  color: var(--title-light);
+}
+.info {
+  font-family: 'Inter';
+  color: var(--font-light);
+  font-size: 13px;
 }

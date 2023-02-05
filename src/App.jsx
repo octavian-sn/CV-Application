@@ -11,8 +11,8 @@ class App extends Component {
     contact: {
       address: '430 Blackwell Street, Anchorage, AK, 99518',
       phone: '907-980-4070',
-      email: 'tony@fishmore.com',
-      website: 'tony.fishmore.com',
+      email: 'tony@moore.com',
+      website: 'tony.moore.com',
     },
     skills: [
       'Communication',
@@ -24,6 +24,13 @@ class App extends Component {
       'Willingness to learn',
       'Autonomous',
     ],
+    info: {
+      name: 'Tony',
+      surname: 'Moore',
+      title: 'Web Developer',
+      about:
+        'Result-oriented and dedicated junior web developer with 1 year of experience, always driven to provide the ultimate user experience using the latest tools to write concise, clean, maintainable code. In my spare time I enjoy reading books, taking long walks in the parks or through the woods, and just being out in the nature away from the city noise.',
+    },
   };
 
   update = {
@@ -48,23 +55,21 @@ class App extends Component {
   };
 
   render() {
-    const { contact, skills, picture } = this.state;
+    const { contact, skills, picture, info } = this.state;
 
     return (
       <div className="app">
-        <Form data={this.state} update={this.update} />
+        <div className="background-overlay"></div>
 
-        <div className="pdf">
-          <div className="resume">
-            <Sidebar
-              contact={contact}
-              skills={skills}
-              picture={picture}
-              update={this.update.picture}
-            />
-            <Main />
-          </div>
-          <div className="background-overlay"></div>
+        <Form data={this.state} update={this.update} />
+        <div className="resume">
+          <Sidebar
+            contact={contact}
+            skills={skills}
+            picture={picture}
+            update={this.update.picture}
+          />
+          <Main info={info} />
         </div>
       </div>
     );

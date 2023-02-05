@@ -22,8 +22,8 @@ class Sidebar extends Component {
     for (const field in details) {
       arr.push(
         <div className="contact--field" key={uniqid()}>
-          <h4>{field.toUpperCase()}</h4>
-          <p>{details[field]}</p>
+          <h4 className="title">{field.toUpperCase()}</h4>
+          <p className="info">{details[field]}</p>
         </div>
       );
     }
@@ -33,9 +33,11 @@ class Sidebar extends Component {
   renderSkills = () => {
     return (
       <div className="skills">
-        <h3>Skills</h3>
+        <h3 className="title">Skills</h3>
         {this.props.skills.map((skill) => (
-          <p key={uniqid()}>{skill}</p>
+          <p className="info" key={uniqid()}>
+            {skill}
+          </p>
         ))}
       </div>
     );
@@ -48,7 +50,7 @@ class Sidebar extends Component {
           <img src={this.props.picture} alt="profile" />
           <input
             type="file"
-            className={`img-overlay ${this.state.changePicture && 'opaque'}`}
+            className={`${this.state.changePicture && 'opaque'}`}
             onChange={(e) => this.props.update(e)}
             onMouseEnter={this.hover}
             onMouseLeave={this.hover}
