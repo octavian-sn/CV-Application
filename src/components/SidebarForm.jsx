@@ -13,54 +13,40 @@ class SidebarForm extends Component {
       <div className="sidebar--form">
         <div className="form--contact">
           <h4>Contact</h4>
-          <label>
-            Address:
-            <input
-              type="text"
-              name="address"
-              value={address}
-              onChange={(e) => updateContact(e)}
-            />
-          </label>
-          <label>
-            Phone:
-            <input
-              type="phone"
-              name="phone"
-              value={phone}
-              onChange={(e) => updateContact(e)}
-            />
-          </label>
-          <label>
-            Email:
-            <input
-              type="email"
-              name="email"
-              value={email}
-              onChange={(e) => updateContact(e)}
-            />
-          </label>
-          <label>
-            Website:
-            <input
-              type="text"
-              name="website"
-              value={website}
-              onChange={(e) => updateContact(e)}
-            />
-          </label>
+          <input
+            type="text"
+            name="address"
+            placeholder="Address"
+            onChange={(e) => updateContact(e)}
+          />
+          <input
+            type="phone"
+            name="phone"
+            placeholder="Phone number"
+            onChange={(e) => updateContact(e)}
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            onChange={(e) => updateContact(e)}
+          />
+          <input
+            type="text"
+            name="website"
+            placeholder="Website"
+            onChange={(e) => updateContact(e)}
+          />
         </div>
-        <label>
-          {<h4>Skills</h4>}
-          <textarea
-            name="skills"
-            id=""
-            cols="50"
-            rows="5"
-            value={skills.join(', ')}
-            onChange={(e) => updateSkills(e)}
-          ></textarea>
-        </label>
+        <h4>Skills</h4>
+        <textarea
+          name="skills"
+          id=""
+          cols="32"
+          rows="6"
+          value={skills.join(', ')}
+          onChange={(e) => updateSkills(e)}
+        ></textarea>
       </div>
     );
   }

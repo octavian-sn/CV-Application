@@ -3,6 +3,7 @@ import Sidebar from './components/Sidebar';
 import Main from './components/Main';
 import Form from './components/Form';
 import picture from './assets/profile.jpg';
+import uniqid from 'uniqid';
 import './styles/app.css';
 
 class App extends Component {
@@ -39,6 +40,7 @@ class App extends Component {
         location: 'Sibiu, RO',
         activity:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        key: uniqid(),
       },
       {
         interval: 'Jun 2022 - Aug 2022',
@@ -47,6 +49,7 @@ class App extends Component {
         location: 'Sibiu, RO',
         activity:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        key: uniqid(),
       },
     ],
     education: [
@@ -55,12 +58,14 @@ class App extends Component {
         interval: 'Sep 2012 - Jun 2016',
         institution: 'University of Transilvania',
         location: 'Brasov, RO',
+        key: uniqid(),
       },
       {
         title: 'High School Degree',
         interval: 'Sep 2007 - Jun 2011',
         institution: 'High school of Arts "Joan of Arc"',
         location: 'Rouen, FR',
+        key: uniqid(),
       },
     ],
   };

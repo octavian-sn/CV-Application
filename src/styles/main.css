@@ -1,16 +1,3 @@
-* {
-  box-sizing: border-box;
-  --light-color: #f7f4f1;
-  --medium-color: #eee8e4;
-  --dark-color: #e6ddd6;
-  --darker-color: #ddd2c9;
-  --title-light: #b8a391;
-  --title-dark: #9c8066;
-  --font-light: #70635a;
-  --dark-font-color: #615a54;
-  --font-dark: #413c39;
-}
-
 .main {
   width: 580px;
   padding: 35px;

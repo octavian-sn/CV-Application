@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SidebarForm from './SidebarForm';
-import MainForm from './MainForm';
+import InfoForm from './InfoForm';
+import '../styles/form.css';
 
 class Form extends Component {
   constructor(props) {
@@ -11,7 +12,7 @@ class Form extends Component {
   render() {
     return (
       <form className="form">
-        <MainForm data={this.props.data} update={this.props.update} />
+        <InfoForm data={this.props.data} update={this.props.update} />
         <SidebarForm data={this.props.data} update={this.props.update} />
       </form>
     );

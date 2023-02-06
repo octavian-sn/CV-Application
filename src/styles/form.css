@@ -1,8 +1,76 @@
 * {
   box-sizing: border-box;
+  --transparent: #f7f4f1ee;
   --light-color: #f7f4f1;
-  --medium-color: #eee8e4;
+  --medium-color: #eee8e4f6;
   --dark-color: #e6ddd6;
   --darker-color: #ddd2c9;
-  --font-color: #615a54;
+  --title-light: #b8a391;
+  --title-dark: #9c8066;
+  --font-light: #70635a;
+  --dark-font-color: #615a54;
+  --font-dark: #413c39;
+}
+
+.form {
+  width: 400px;
+  margin-left: 25px;
+  margin-top: 10px;
+  background-color: rgba(255, 255, 255, 0.274);
+  width: 400px;
+  border: solid 1px var(--darker-color);
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+/* Form section titles */
+.form h4 {
+  margin-bottom: 5px;
+  font-size: 20px;
+  color: var(--title-dark);
+  /* text-shadow: 0 0 10px var(--title-dark), -1px 1px 0 var(--title-light),
+    1px 1px 0 var(--title-light), 1px -1px 0 var(--title-light),
+    -1px -1px 0 var(--title-light); */
+}
+
+/* Input and textarea */
+.form input {
+  margin-right: 12px;
+  margin-bottom: 6px;
+  width: 161px;
+  /* */
+  height: 30px;
+}
+.form input,
+.form textarea {
+  border: none;
+  border-radius: 5px;
+  background-color: var(--transparent);
+  border: solid 1px transparent;
+  box-shadow: 0 1px 3px 0 var(--title-dark);
+  color: var(--title-dark);
+  padding-left: 10px;
+  font-size: 16px;
+}
+/* Hovering */
+.form input:hover,
+.form textarea:hover {
+  border-color: var(--title-light);
+}
+/* Focus */
+.form input:focus,
+.form textarea:focus {
+  outline: none;
+  background-color: white;
+}
+/* Placeholder font color */
+.form input::placeholder,
+.form textarea::placeholder {
+  color: var(--title-dark);
+}
+
+.form--contact {
+  margin-bottom: 32px;
 }

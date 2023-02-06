@@ -1,14 +1,15 @@
 * {
   box-sizing: border-box;
+  --transparent: #f7f4f1ee;
   --light-color: #f7f4f1;
   --medium-color: #eee8e4;
   --dark-color: #e6ddd6;
   --darker-color: #ddd2c9;
-  --dark-font-color: #615a54;
+  --title-light: #b8a391;
   --title-dark: #9c8066;
   --font-light: #70635a;
+  --dark-font-color: #615a54;
   --font-dark: #413c39;
-  --title-light: #b8a391;
 }
 
 body {
@@ -46,7 +47,7 @@ form {
 
 .resume {
   margin: 10px 30px 0 30px;
-  background-color: #f7f4f1ee;
+  background-color: var(--transparent);
   z-index: 10;
   display: flex;
   flex-direction: row;

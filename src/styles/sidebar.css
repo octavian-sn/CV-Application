@@ -36,7 +36,6 @@
 }
 .contact--field {
   border-bottom: 1px var(--title-light) solid;
-  overflow: hidden;
 }
 .contact--field:last-child {
   border-bottom: none;
