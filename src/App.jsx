@@ -33,17 +33,17 @@ class App extends Component {
     },
     experience: [
       {
-        interval: 'SEP 2022 - PRESENT',
+        interval: 'Sep 2022 - Present',
         title: 'Junior Web Developer',
-        company: 'My First WebTeam',
+        institution: 'My First WebTeam',
         location: 'Sibiu, RO',
         activity:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
       },
       {
-        interval: 'JUN 2022 - AUG 2022',
+        interval: 'Jun 2022 - Aug 2022',
         title: 'Intern Web Developer',
-        company: 'My First WebTeam',
+        institution: 'My First WebTeam',
         location: 'Sibiu, RO',
         activity:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
@@ -51,14 +51,16 @@ class App extends Component {
     ],
     education: [
       {
-        interval: 'SEP 2012 - IUN 2016',
         title: 'Bachelor of Laws',
-        school: 'Universitatea Transilvania of Brasov',
+        interval: 'Sep 2012 - Jun 2016',
+        institution: 'University of Transilvania',
+        location: 'Brasov, RO',
       },
       {
-        interval: 'SEP 2007 - IUN 2011',
-        title: 'High school degree',
-        school: 'High school of Arts "Joan of Arc" of Rouen',
+        title: 'High School Degree',
+        interval: 'Sep 2007 - Jun 2011',
+        institution: 'High school of Arts "Joan of Arc"',
+        location: 'Rouen, FR',
       },
     ],
   };
@@ -91,7 +93,8 @@ class App extends Component {
   };
 
   render() {
-    const { contact, skills, picture, info } = this.state;
+    const { contact, skills, picture, info, experience, education } =
+      this.state;
 
     return (
       <div className="app">
@@ -105,7 +108,7 @@ class App extends Component {
             picture={picture}
             update={this.update.picture}
           />
-          <Main info={info} />
+          <Main info={info} experience={experience} education={education} />
         </div>
       </div>
     );

@@ -4,11 +4,11 @@
   --medium-color: #eee8e4;
   --dark-color: #e6ddd6;
   --darker-color: #ddd2c9;
-  --dark-font-color: #615a54;
+  --title-light: #b8a391;
   --title-dark: #9c8066;
   --font-light: #70635a;
+  --dark-font-color: #615a54;
   --font-dark: #413c39;
-  --title-light: #b8a391;
 }
 
 .main {
@@ -49,6 +49,44 @@
   margin-bottom: -5px;
 }
 .main--info p {
+  color: var(--font-light);
+  font-family: 'Garamond';
+  font-size: 15px;
+  text-align: justify;
+  line-height: 18px;
+}
+
+/* Education & Experience Sections */
+.main--category {
+  display: flex;
+  flex-direction: column;
+}
+.main--category h3 {
+  border-bottom: 1px solid var(--title-light);
+  margin-bottom: 6px;
+}
+.main--category-field {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 8px;
+}
+.field-left {
+  width: 180px;
+  overflow: hidden;
+}
+.field-left .title,
+.field-right .title {
+  margin-bottom: -4px;
+  color: var(--title-dark);
+}
+.field-right {
+  width: 400px;
+  overflow: hidden;
+}
+.field-right p:first-child {
+  margin-bottom: -12px;
+}
+.info.activity {
   color: var(--font-light);
   font-family: 'Garamond';
   font-size: 15px;
