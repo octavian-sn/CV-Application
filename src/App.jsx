@@ -68,6 +68,13 @@ class App extends Component {
         key: uniqid(),
       },
     ],
+    form: {
+      title: '',
+      interval: '',
+      institution: '',
+      location: '',
+      activity: '',
+    },
   };
 
   update = {
@@ -94,6 +101,43 @@ class App extends Component {
       this.setState((prevState) => ({
         info: { ...prevState.info, [name]: value },
       }));
+    },
+    form: (e) => {
+      const { name, value } = e.target;
+      this.setState((prevState) => ({
+        form: { ...prevState.form, [name]: value },
+      }));
+    },
+    addSection: (e) => {
+      const { title, interval, institution, location, activity } =
+        this.state.form;
+      e.preventDefault();
+      if (activity === '' && title !== '') {
+        this.setState((prevState) => ({
+          education: [
+            ...prevState.education,
+            { title, interval, institution, location, key: uniqid() },
+          ],
+        }));
+      }
+      if (activity !== '' && title !== '') {
+        this.setState((prevState) => ({
+          experience: [
+            ...prevState.experience,
+            { title, interval, institution, location, activity, key: uniqid() },
+          ],
+        }));
+      }
+      this.setState({
+        form: {
+          title: '',
+          interval: '',
+          institution: '',
+          location: '',
+          activity: '',
+          key: '',
+        },
+      });
     },
   };
 

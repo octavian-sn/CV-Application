@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SidebarForm from './SidebarForm';
 import InfoForm from './InfoForm';
+import MainForm from './MainForm';
 import '../styles/form.css';
 
 class Form extends Component {
@@ -11,10 +12,11 @@ class Form extends Component {
 
   render() {
     return (
-      <form className="form">
+      <div className="form">
         <InfoForm data={this.props.data} update={this.props.update} />
         <SidebarForm data={this.props.data} update={this.props.update} />
-      </form>
+        <MainForm data={this.props.data} update={this.props.update} />
+      </div>
     );
   }
 }

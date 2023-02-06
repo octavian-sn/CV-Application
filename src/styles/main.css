@@ -6,6 +6,7 @@
 .main--info {
   margin-left: 50px;
   font-family: 'Karla';
+  overflow: hidden;
 }
 .main--info-name {
   display: flex;

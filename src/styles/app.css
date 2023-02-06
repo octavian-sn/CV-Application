@@ -37,22 +37,15 @@ body {
   z-index: 1;
 }
 
-/* FORM */
-form {
-  min-height: 100vh;
-  width: 500px;
-  position: relative;
-  z-index: 10;
-}
-
 .resume {
-  margin: 10px 30px 0 30px;
+  margin: 10px 30px 10px 30px;
   background-color: var(--transparent);
   z-index: 10;
   display: flex;
   flex-direction: row;
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px;
   border: solid 1px var(--darker-color);
+  height: fit-content;
 }
 
 /* Font and color for section title and section info */

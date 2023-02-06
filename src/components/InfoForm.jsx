@@ -4,11 +4,7 @@ class InfoForm extends Component {
   constructor(props) {
     super(props);
   }
-  renderExperienceForm = () => {
-    this.props.experience.map();
-  };
 
-  state = {};
   render() {
     const updateInfo = this.props.update.info;
     return (
@@ -34,7 +30,7 @@ class InfoForm extends Component {
         />
         <textarea
           name="about"
-          cols="32"
+          cols="31"
           rows="8"
           placeholder="Summary"
           onChange={(e) => updateInfo(e)}
