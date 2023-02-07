@@ -58,3 +58,18 @@ body {
   color: var(--font-light);
   font-size: 13px;
 }
+
+/* Credits */
+.credits {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 340px;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--title-dark);
+  font-family: 'Garamond';
+  background-color: rgba(255, 255, 255, 0.432);
+  margin: 0 0 -30px 0;
+}
