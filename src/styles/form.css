@@ -27,11 +27,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 18px;
 }
 /* Form section titles */
 .form h4 {
-  margin-bottom: 5px;
+  margin-bottom: 4px;
   font-size: 20px;
   color: var(--title-dark);
   /* text-shadow: 0 0 10px var(--title-dark), -1px 1px 0 var(--title-light),
@@ -49,7 +48,8 @@
 }
 .form input,
 .form textarea,
-#add-button {
+#add-button,
+li button {
   border: none;
   border-radius: 5px;
   background-color: var(--transparent);
@@ -96,8 +96,51 @@
   border-color: var(--title-light);
 }
 #add-button:active {
-  /* border-color: var(--title-light); */
   background-color: white;
+  transform: translateY(1px);
+  box-shadow: 0 0 3px 0 var(--title-dark);
+}
+
+/* Experience & Education fields deletion */
+ul {
+  border: solid 1px transparent;
+  box-shadow: 0 1px 3px 0 var(--title-dark);
+  background-color: rgba(255, 255, 255, 0.329);
+  border-radius: 10px;
+  padding: 25px;
+}
+ul .title {
+  text-align: center;
+  margin-top: -15px;
+  font-family: 'Garamond';
+  margin-bottom: 1px;
+}
+li {
+  height: 40px;
+  font-size: large;
+  font-family: 'Karla';
+  color: var(--title-dark);
+}
+.form--fields li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  min-width: fit-content;
+  gap: 15px;
+}
+.form--fields li button {
+  background-image: url(../assets/icon.png);
+  background-position: center;
+  height: 18px;
+  width: 18px;
+  cursor: pointer;
+  margin-bottom: 4px;
+}
+.form--fields li button:hover {
+  border-color: var(--title-light);
+}
+.form--fields li button:active {
   transform: translateY(1px);
   box-shadow: 0 0 3px 0 var(--title-dark);
 }

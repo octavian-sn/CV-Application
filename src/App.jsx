@@ -139,6 +139,12 @@ class App extends Component {
         },
       });
     },
+    removeSection: (key) => {
+      this.setState((prevState) => ({
+        experience: prevState.experience.filter((item) => item.key !== key),
+        education: prevState.education.filter((item) => item.key !== key),
+      }));
+    },
   };
 
   render() {

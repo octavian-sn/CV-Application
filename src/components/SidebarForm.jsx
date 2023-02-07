@@ -42,7 +42,7 @@ class SidebarForm extends Component {
         <textarea
           name="skills"
           cols="31"
-          rows="6"
+          rows="4"
           placeholder="Separate elements with a comma and a space '. '&#10;e.g.,Communication, Adaptability, Detail-oriented, Team-work.."
           onChange={(e) => updateSkills(e)}
         ></textarea>

@@ -4,7 +4,6 @@ class MainForm extends Component {
   constructor(props) {
     super(props);
   }
-  state = {};
   render() {
     const data = this.props.data.form;
     const addSection = this.props.update.addSection;

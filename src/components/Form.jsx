@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import SidebarForm from './SidebarForm';
 import InfoForm from './InfoForm';
 import MainForm from './MainForm';
+import FieldsForm from './FieldsForm';
 import '../styles/form.css';
 
 class Form extends Component {
@@ -16,6 +17,7 @@ class Form extends Component {
         <InfoForm data={this.props.data} update={this.props.update} />
         <SidebarForm data={this.props.data} update={this.props.update} />
         <MainForm data={this.props.data} update={this.props.update} />
+        <FieldsForm data={this.props.data} update={this.props.update} />
       </div>
     );
   }
