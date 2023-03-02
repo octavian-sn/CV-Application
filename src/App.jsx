@@ -1,12 +1,13 @@
-import React, { Component } from 'react';
-import Sidebar from './components/Sidebar';
-import Main from './components/Main';
+import React from 'react';
 import Form from './components/Form';
+import Resume from './components/Resume';
 import picture from './assets/profile.jpg';
 import uniqid from 'uniqid';
+import download from './assets/download.png';
+import ReactToPrint from 'react-to-print';
 import './styles/app.css';
 
-class App extends Component {
+class App extends React.PureComponent {
   state = {
     picture: picture,
     contact: {
@@ -150,21 +151,30 @@ class App extends Component {
   render() {
     const { contact, skills, picture, info, experience, education } =
       this.state;
+    const update = this.update.picture;
 
     return (
       <div className="app">
         <div className="background-overlay"></div>
 
-        <Form data={this.state} update={this.update} />
-        <div className="resume">
-          <Sidebar
-            contact={contact}
-            skills={skills}
-            picture={picture}
-            update={this.update.picture}
-          />
-          <Main info={info} experience={experience} education={education} />
-        </div>
+        <Form
+          data={this.state}
+          update={this.update}
+          print={() => (
+            <ReactToPrint
+              trigger={() => {
+                return <img id="download" src={download} alt="download" />;
+              }}
+              content={() => this.componentRef}
+              documentTitle={`Resume - ${info.name} ${info.surname}`}
+              pageStyle="print"
+            />
+          )}
+        />
+        <Resume
+          ref={(el) => (this.componentRef = el)}
+          data={[contact, skills, picture, info, experience, education, update]}
+        />
       </div>
     );
   }

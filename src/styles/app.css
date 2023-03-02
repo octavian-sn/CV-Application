@@ -26,6 +26,7 @@ body {
   background-image: url(../assets/background.jpg);
   background-size: cover;
   min-height: 100vh;
+  padding: 10px 30px 10px 30px;
 }
 .background-overlay {
   min-height: 100%;
@@ -38,7 +39,7 @@ body {
 }
 
 .resume {
-  margin: 10px 30px 10px 30px;
+  /* margin: 10px 0 10px 30px; */
   background-color: var(--transparent);
   z-index: 10;
   display: flex;
