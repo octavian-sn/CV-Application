@@ -54,6 +54,7 @@ class Sidebar extends Component {
             onChange={(e) => this.props.update(e)}
             onMouseEnter={this.hover}
             onMouseLeave={this.hover}
+            value={''}
           ></input>
         </div>
         {this.renderContact()}
